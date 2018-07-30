@@ -53,5 +53,8 @@
     ]
   },
   "unpkg": "umd/vue-picture-input.js",
-  "jsdelivr": "umd/vue-picture-input.js"
+  "jsdelivr": "umd/vue-picture-input.js",
+  "dependencies": {
+    "babel-loader": "^7.1.5"
+  }
 }
