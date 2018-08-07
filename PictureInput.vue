@@ -151,9 +151,6 @@ export default {
       } else {
         this.removeImage()
       }
-    },
-    previewHeight: function(height) {
-      console.log('height:'  + height +'px');
     }
   },
   data () {
@@ -179,7 +176,6 @@ export default {
     }
   },
   mounted () {
-  console.log('pic input mounted');
     this.updateStrings()
     if (this.prefill) {
       this.preloadImage(this.prefill, this.prefillOptions)
