@@ -1,6 +1,5 @@
 <template>
   <div ref="container" id="picture-input" class="picture-input">
-    MATT VERSION
     <div v-if="!supportsUpload" v-html="strings.upload"></div>
     <div v-else-if="supportsPreview">
       <div class="preview-container"
@@ -417,17 +416,14 @@ export default {
       this.$emit('aspectratiochange', newOrientation)
     },
     resizeCanvas () {
-      console.log('resizeCanvas')
       let previewRatio = this.canvasWidth / this.canvasHeight
       let newWidth = this.$refs.container.clientWidth
       if (!this.toggleAspectRatio && newWidth === this.containerWidth) {
-        console.log('abort');
         return
       }
       this.containerWidth = newWidth
       this.previewWidth = Math.min(this.containerWidth - this.margin * 2, this.canvasWidth)
       this.previewHeight = this.previewWidth / previewRatio
-      console.log( previewHeight );
     },
     getOrientation (width, height) {
       let orientation = 'square'
