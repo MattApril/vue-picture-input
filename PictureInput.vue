@@ -258,14 +258,15 @@ export default {
       }
 
       if( files.length > 1 ) {
+        let reader = new FileReader()
         let multiFileData = [];
         let i = 0;
 
+        reader.onload = e => {
+          multiFileData.push(e.target.result);
+        }
+
         for (i ; i < files.length; i++) {
-          let reader = new FileReader();
-          reader.onload = e => {
-            multiFileData.push(e.target.result);
-          }
           reader.readAsDataURL(files[i]);
         }
 
