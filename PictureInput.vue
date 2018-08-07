@@ -258,19 +258,7 @@ export default {
       }
 
       if( files.length > 1 ) {
-        let reader = new FileReader()
-        let multiFileData = [];
-        let i = 0;
-
-        reader.onload = e => {
-          multiFileData.push(e.target.result);
-        }
-
-        for (i ; i < files.length; i++) {
-          reader.readAsDataURL(file);
-        }
-
-        this.$emit('multiple', multiFileData);
+        this.$emit('multiple', files);
       }
 
       if (files[0].size <= 0 || files[0].size > this.size * 1024 * 1024) {
