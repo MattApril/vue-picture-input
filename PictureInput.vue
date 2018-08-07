@@ -267,7 +267,7 @@ export default {
         }
 
         for (i ; i < files.length; i++) {
-          reader.readAsDataURL(file);
+          reader.readAsDataURL(files[i]);
         }
 
         this.$emit('multiple', multiFileData);
