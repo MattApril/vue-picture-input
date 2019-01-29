@@ -1,5 +1,5 @@
 <template>
-  <div ref="container" id="picture-input" class="picture-input">
+  <div ref="container" class="picture-input">
     <div v-if="!supportsUpload" v-html="strings.upload"></div>
     <div v-else-if="supportsPreview">
       <div class="preview-container"
